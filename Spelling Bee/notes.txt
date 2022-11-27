@@ -1,0 +1,28 @@
+def test2() -> None:
+    mid_ltr = 'k'
+    ltrs = 'PRINGA'
+    words = generate_words(other_ltrs=ltrs.lower(), mid_ltr=mid_ltr.lower())
+    for word in words:  # Prints just the strong word
+        if mid_ltr in word and ltrs[0] in word and ltrs[1] in word and ltrs[2] in word and ltrs[3] in word and ltrs[4] in word and ltrs[5] in word:
+            strong_word = Colors.BOLD + Colors.BLUE + word + Colors.END
+            print("The strong word is -", strong_word)
+
+    for word in words:  # Prints all other words
+        if mid_ltr in word and ltrs[0] in word and ltrs[1] in word and ltrs[2] in word and ltrs[3] in word and ltrs[4] in word and ltrs[5] in word:
+            continue
+        print(word, end=", ")
+
+    print("\n\nI have found {wrds} words in total.".format(wrds=len(words)))
+
+
+def eng_test():
+    engl_set = engl_dict()
+    print(type(engl_set))
+    for word in engl_set:
+        print(word)
+        print(len(word))
+
+
+https://spellingbeetimes.com/category/nyt-answers/
+All the answers for early spelling bee. Perhaps I could download all the answers together and see if there's a pattern.
+Or I could create a dictionary from their words, thus eliminating a lot of options from the program.
